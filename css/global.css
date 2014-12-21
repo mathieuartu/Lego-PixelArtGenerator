@@ -1,0 +1,727 @@
+/* line 17, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "Cassanet";
+  src: url("fonts/cassannet_bold-webfont.eot");
+  src: url("fonts/cassannet_bold-webfont.eot?#iefix") format("eot"), url("fonts/cassannet_bold-webfont.woff") format("woff"), url("fonts/cassannet_bold-webfont.ttf") format("truetype"), url("/css/fonts/cassannet_bold-webfont.svg") format("svg");
+}
+
+/* line 11, ../sass/global.scss */
+body {
+  text-shadow: 0 1px black;
+  background: #333;
+  color: #eee;
+  font: normal 14px Helvetica, Arial, sans-serif;
+}
+
+/* line 18, ../sass/global.scss */
+header {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 250px;
+  background: #ffd800;
+}
+/* line 25, ../sass/global.scss */
+header img {
+  display: block;
+  margin: 40px auto 0;
+}
+
+/* line 31, ../sass/global.scss */
+.hidden {
+  display: none;
+}
+
+/* line 37, ../sass/global.scss */
+#global {
+  overflow: hidden;
+  width: 1100px;
+  margin: 0 auto;
+}
+/* line 43, ../sass/global.scss */
+#global #intro {
+  position: relative;
+  left: 70px;
+  padding-top: 30px;
+  height: 460px;
+  width: 820px;
+  margin: 0 auto;
+  background: url(i/astro.jpg) no-repeat 100% 70px;
+}
+/* line 54, ../sass/global.scss */
+#global #intro .text {
+  float: left;
+  padding: 100px 0 0 0;
+  margin-bottom: 30px;
+  width: 300px;
+}
+/* line 60, ../sass/global.scss */
+#global #intro .text h2 {
+  margin-bottom: 30px;
+  font: normal 30px Cassanet, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+/* line 66, ../sass/global.scss */
+#global #intro .text h2, #global #intro .text p, #global #intro .text small, #global #intro .text em {
+  display: block;
+  width: 300px;
+}
+/* line 74, ../sass/global.scss */
+#global #upload {
+  padding-top: 30px;
+  height: 320px;
+  width: 900px;
+  margin: 0 auto;
+}
+/* line 80, ../sass/global.scss */
+#global #upload img {
+  float: left;
+  margin-right: 60px;
+}
+/* line 85, ../sass/global.scss */
+#global #upload .text {
+  float: left;
+  padding: 50px 0 0 400px;
+  margin-bottom: 40px;
+  width: 740px;
+  height: 230px;
+  background: url(i/intro.png) no-repeat 0 0;
+}
+/* line 92, ../sass/global.scss */
+#global #upload .text h2 {
+  margin-bottom: 30px;
+  font: normal 30px Cassanet, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+/* line 98, ../sass/global.scss */
+#global #upload .text h2, #global #upload .text p, #global #upload .text small, #global #upload .text em {
+  display: block;
+  width: 400px;
+}
+
+/* line 108, ../sass/global.scss */
+.brick-helper {
+  display: none;
+  position: absolute;
+  padding: 10px;
+  border: 1px solid black;
+  background: rgba(70, 70, 70, 0.8);
+  color: #fff;
+  text-shadow: 0 1px black;
+  z-index: 200;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* line 119, ../sass/global.scss */
+.form-bg {
+  position: fixed;
+  bottom: 170px;
+  left: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  -webkit-transition: height 0.2s;
+  -moz-transition: height 0.2s;
+  -o-transition: height 0.2s;
+  transition: height 0.2s;
+  width: 100%;
+  height: 70px;
+  background: url(i/line-shadow.png) repeat-x 0 0;
+}
+/* line 130, ../sass/global.scss */
+.form-bg.fixed {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  height: 0;
+}
+
+/* line 136, ../sass/global.scss */
+form#upload-image {
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 240px;
+  z-index: 100;
+}
+/* line 147, ../sass/global.scss */
+form#upload-image.fixed {
+  position: static;
+  height: auto;
+  width: auto;
+}
+/* line 152, ../sass/global.scss */
+form#upload-image.fixed fieldset {
+  height: auto;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+/* line 163, ../sass/global.scss */
+form#upload-image fieldset {
+  height: 130px;
+  padding-top: 40px;
+  margin-top: 70px;
+  background: #333;
+}
+/* line 170, ../sass/global.scss */
+form#upload-image .upload {
+  position: relative;
+  width: 302px;
+  height: 90px;
+  background: url(i/button.png) no-repeat 0 0;
+  text-align: center;
+  padding-top: 10px;
+  margin: 0 auto;
+  font: normal 16px Cassanet, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.7);
+}
+/* line 183, ../sass/global.scss */
+form#upload-image .upload em {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 12px;
+}
+/* line 188, ../sass/global.scss */
+form#upload-image .upload.hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+/* line 193, ../sass/global.scss */
+form#upload-image .file {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 302px;
+  height: 90px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+/* line 203, ../sass/global.scss */
+form#upload-image button {
+  display: none;
+}
+
+/* line 208, ../sass/global.scss */
+.lego-image {
+  margin: 70px auto 50px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 214, ../sass/global.scss */
+.lego-image .brick {
+  position: absolute;
+  background-image: url(i/lego-stud.png);
+  background-repeat: repeat-x;
+  background-position: 0 50%;
+}
+/* line 220, ../sass/global.scss */
+.lego-image .brick.hover, .lego-image .brick.selected {
+  cursor: pointer;
+  z-index: 15;
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.6);
+}
+/* line 227, ../sass/global.scss */
+.lego-image .brick.hover.disabled {
+  opacity: 0.5;
+}
+/* line 231, ../sass/global.scss */
+.lego-image .brick.disabled {
+  opacity: 0;
+}
+/* line 234, ../sass/global.scss */
+.lego-image .brick.disabled.selected {
+  opacity: 0.5;
+  border: 1px solid red;
+}
+/* line 241, ../sass/global.scss */
+.lego-image.lego-pixel-15 .brick {
+  background-image: url(i/lego-stud-15.png);
+}
+/* line 245, ../sass/global.scss */
+.lego-image.lego-pixel-10 .brick {
+  background-image: url(i/lego-stud-10.png);
+}
+/* line 249, ../sass/global.scss */
+.lego-image.lego-pixel-35 .brick {
+  background-image: url(i/lego-stud-35.png);
+}
+
+/* line 255, ../sass/global.scss */
+.size {
+  margin-bottom: 30px;
+  text-align: center;
+}
+/* line 258, ../sass/global.scss */
+.size p {
+  margin-bottom: 10px;
+}
+/* line 261, ../sass/global.scss */
+.size strong {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  padding: 5px 10px;
+  border: 1px solid #888888;
+  background: #555;
+  font-size: 14px;
+}
+
+/* line 270, ../sass/global.scss */
+.control {
+  width: 420px;
+  padding: 40px 0 40px 40px;
+  margin: 0 auto;
+  border: 10px solid rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+}
+/* line 277, ../sass/global.scss */
+.control .save-reset {
+  position: relative;
+  left: -20px;
+  margin-bottom: 20px;
+}
+/* line 281, ../sass/global.scss */
+.control .save-reset button {
+  cursor: pointer;
+  width: 130px;
+  height: 53px;
+  vertical-align: top;
+  background: url(i/minibutton.png) no-repeat 15px 6px;
+  text-align: center;
+  font: normal 16px Cassanet, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 301, ../sass/global.scss */
+.helper {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  background: rgba(30, 30, 30, 0.7);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 300px;
+  padding: 20px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+/* line 313, ../sass/global.scss */
+.tm {
+  margin-top: 100px;
+  padding: 20px 0;
+  width: 100%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  text-align: center;
+}
+/* line 320, ../sass/global.scss */
+.tm p {
+  font-size: 11px;
+}
+/* line 323, ../sass/global.scss */
+.tm strong {
+  font-size: 12px;
+}
+/* line 327, ../sass/global.scss */
+.tm a {
+  color: #fff;
+}
+
+/* line 332, ../sass/global.scss */
+.control-panel {
+  display: none;
+  position: absolute;
+  left: 300px;
+  z-index: 500;
+}
+/* line 339, ../sass/global.scss */
+.control-panel .actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(i/wheelsprite.png) no-repeat 0 0;
+  width: 320px;
+  height: 320px;
+  overflow: hidden;
+}
+/* line 348, ../sass/global.scss */
+.control-panel .actions.step-close {
+  background-position: 0 -320px;
+}
+/* line 351, ../sass/global.scss */
+.control-panel .actions.step-1 {
+  background-position: 0 -640px;
+}
+/* line 354, ../sass/global.scss */
+.control-panel .actions.step-2 {
+  background-position: 0 -960px;
+}
+/* line 357, ../sass/global.scss */
+.control-panel .actions.step-3 {
+  background-position: 0 -1280px;
+}
+/* line 360, ../sass/global.scss */
+.control-panel .actions.step-4 {
+  background-position: 0 -1600px;
+}
+/* line 363, ../sass/global.scss */
+.control-panel .actions.step-5 {
+  background-position: 0 -1920px;
+}
+/* line 368, ../sass/global.scss */
+.control-panel span {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  width: 85px;
+  height: 85px;
+  text-indent: -9999em;
+}
+/* line 377, ../sass/global.scss */
+.control-panel span.close {
+  width: 50px;
+  height: 50px;
+  top: 135px;
+  left: 135px;
+}
+/* line 384, ../sass/global.scss */
+.control-panel span.add {
+  top: 40px;
+  left: 170px;
+}
+/* line 388, ../sass/global.scss */
+.control-panel span.remove-color {
+  top: 143px;
+  left: 30px;
+}
+/* line 392, ../sass/global.scss */
+.control-panel span.putback-color {
+  top: 143px;
+  left: 210px;
+}
+/* line 396, ../sass/global.scss */
+.control-panel span.change-color {
+  top: 210px;
+  left: 120px;
+}
+/* line 400, ../sass/global.scss */
+.control-panel span.remove {
+  top: 40px;
+  left: 60px;
+}
+
+/* line 407, ../sass/global.scss */
+.colorpicker {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 200;
+}
+/* line 414, ../sass/global.scss */
+.colorpicker .cancel {
+  position: absolute;
+  top: 95px;
+  left: 95px;
+  width: 89px;
+  height: 89px;
+  -webkit-border-radius: 100% 100%;
+  -moz-border-radius: 100% 100%;
+  -ms-border-radius: 100% 100%;
+  -o-border-radius: 100% 100%;
+  border-radius: 100% 100%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: #383838 url(i/cancel.png?a) no-repeat 0 0;
+  z-index: 400;
+  -webkit-box-shadow: 0 0 10px #333333;
+  -moz-box-shadow: 0 0 10px #333333;
+  box-shadow: 0 0 10px #333333;
+}
+/* line 426, ../sass/global.scss */
+.colorpicker .cancel.nobg {
+  background-image: url(i/cancel-color.png);
+}
+
+/* line 434, ../sass/global.scss */
+#svg path {
+  cursor: pointer;
+}
+
+/* line 439, ../sass/global.scss */
+.pieces {
+  background: #fff;
+  overflow: hidden;
+  width: 100%;
+  margin: 40px auto 0;
+  color: #333;
+  text-shadow: none;
+  text-align: center;
+}
+/* line 448, ../sass/global.scss */
+.pieces h2 {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  text-transform: uppercase;
+  margin: 30px auto;
+  font: normal 30px Cassanet, Helvetica, Arial, sans-serif;
+}
+/* line 455, ../sass/global.scss */
+.pieces .list {
+  overflow: hidden;
+  width: 1002px;
+  margin: 30px auto;
+  text-align: left;
+  border: 10px solid #dddddd;
+}
+/* line 462, ../sass/global.scss */
+.pieces dl {
+  float: left;
+  width: 142px;
+  padding: 0 12px 20px;
+  text-align: center;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+/* line 470, ../sass/global.scss */
+.pieces dl:nth-child(6n) {
+  border-right: none;
+}
+/* line 474, ../sass/global.scss */
+.pieces dl dt {
+  text-align: center;
+  position: relative;
+  display: block;
+  margin: 30px 0 15px;
+  text-decoration: underline;
+}
+/* line 482, ../sass/global.scss */
+.pieces dl dt span {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin: 0 auto 10px;
+  margin-right: 20px;
+  width: 40px;
+  height: 24px;
+  background: url(i/transparent-brick.png) no-repeat 0 0;
+}
+/* line 491, ../sass/global.scss */
+.pieces dl dt em {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-bottom: 30px;
+  padding: 5px 10px;
+  color: #fff;
+  border: 1px solid #333333;
+  text-shadow: 0 1px black;
+  background: #666;
+}
+/* line 501, ../sass/global.scss */
+.pieces dl dt.black span {
+  background-color: #000;
+}
+/* line 504, ../sass/global.scss */
+.pieces dl dt.dark-grey span {
+  background-color: #4c5156;
+}
+/* line 507, ../sass/global.scss */
+.pieces dl dt.dark-flesh span {
+  background-color: #e98c35;
+}
+/* line 510, ../sass/global.scss */
+.pieces dl dt.pink span {
+  background-color: #ee9dc3;
+}
+/* line 513, ../sass/global.scss */
+.pieces dl dt.purple span {
+  background-color: #9c006b;
+}
+/* line 516, ../sass/global.scss */
+.pieces dl dt.dark-pink span {
+  background-color: #de378b;
+}
+/* line 519, ../sass/global.scss */
+.pieces dl dt.sand-green span {
+  background-color: #5f8265;
+}
+/* line 522, ../sass/global.scss */
+.pieces dl dt.sand-blue span {
+  background-color: #5e748c;
+}
+/* line 525, ../sass/global.scss */
+.pieces dl dt.reddish-brown span {
+  background-color: #a83d15;
+}
+/* line 528, ../sass/global.scss */
+.pieces dl dt.dark-tan span {
+  background-color: #8d7452;
+}
+/* line 531, ../sass/global.scss */
+.pieces dl dt.brown span {
+  background-color: #5b1c0c;
+}
+/* line 534, ../sass/global.scss */
+.pieces dl dt.dark-brown span {
+  background-color: #300f10;
+}
+/* line 537, ../sass/global.scss */
+.pieces dl dt.dark-red span {
+  background-color: #80081b;
+}
+/* line 540, ../sass/global.scss */
+.pieces dl dt.light-grey span {
+  background-color: #e4e4da;
+}
+/* line 543, ../sass/global.scss */
+.pieces dl dt.lime span {
+  background-color: #95b90b;
+}
+/* line 546, ../sass/global.scss */
+.pieces dl dt.green span {
+  background-color: #009624;
+}
+/* line 549, ../sass/global.scss */
+.pieces dl dt.dark-green span {
+  background-color: #007b28;
+}
+/* line 552, ../sass/global.scss */
+.pieces dl dt.dark-blue span {
+  background-color: #2c1577;
+}
+/* line 555, ../sass/global.scss */
+.pieces dl dt.medium-blue span {
+  background-color: #87c0ea;
+}
+/* line 558, ../sass/global.scss */
+.pieces dl dt.blue span {
+  background-color: #0057a8;
+}
+/* line 561, ../sass/global.scss */
+.pieces dl dt.tan span {
+  background-color: #f5c189;
+}
+/* line 564, ../sass/global.scss */
+.pieces dl dt.red span {
+  background-color: #de000d;
+}
+/* line 567, ../sass/global.scss */
+.pieces dl dt.dark-orange span {
+  background-color: #e76302;
+}
+/* line 570, ../sass/global.scss */
+.pieces dl dt.orange span {
+  background-color: #f49b00;
+}
+/* line 573, ../sass/global.scss */
+.pieces dl dt.yellow span {
+  background-color: #fec400;
+}
+/* line 580, ../sass/global.scss */
+.pieces dl dd {
+  margin-bottom: 10px;
+}
+/* line 583, ../sass/global.scss */
+.pieces dl dd strong {
+  font-weight: bold;
+}

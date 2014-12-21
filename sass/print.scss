@@ -1,0 +1,33 @@
+#upload, .save-reset, #intro, #upload-image{
+	display:none !important;
+}
+
+body, header{background:#fff;}
+
+.size{
+	color:#000;
+	text-shadow:none;
+
+	strong{color:#fff;}
+}
+.tm{
+	color:#000;
+	text-shadow:none;
+}
+
+.helper.bricks{
+	display:none !important;
+}
+
+.lego-image{
+	border-right:1px solid #000;
+	border-bottom:1px solid #000;
+}
+.lego-image .brick{
+	border:1px solid #000;
+}
+
+.change-size{
+	color:#000;
+	text-shadow:none;
+}

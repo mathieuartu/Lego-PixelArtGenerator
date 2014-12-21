@@ -1,0 +1,588 @@
+@import "compass/css3";
+@import "compass/reset";
+
+
+@font-face {
+  font-family: "Cassanet";
+  src: url('fonts/cassannet_bold-webfont.eot');
+  src: url('fonts/cassannet_bold-webfont.eot?#iefix') format('eot'), url('fonts/cassannet_bold-webfont.woff') format('woff'), url('fonts/cassannet_bold-webfont.ttf') format('truetype'), url('/css/fonts/cassannet_bold-webfont.svg') format('svg');
+}
+
+body{
+	text-shadow:0 1px rgba(0,0,0,1);
+	background:#333;
+	color:#eee;
+	font:normal 14px Helvetica, Arial, sans-serif;
+}
+
+header{
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	height:250px;
+	background:#ffd800;
+
+	img{
+		display:block;
+		margin:40px auto 0;
+	}
+}
+
+.hidden{
+	display:none;
+}
+
+
+
+#global{
+	overflow: hidden;
+	width:1100px;
+	margin:0 auto;
+	
+
+	#intro{
+		position:relative;
+		left:70px;
+		padding-top:30px;
+		height:460px;
+		width:820px;
+		margin:0 auto;
+
+		
+		background:url(i/astro.jpg) no-repeat 100% 70px;
+
+		.text{
+			float:left;
+			padding:100px 0 0 0;
+			margin-bottom:30px;
+			width:300px;
+			
+			h2{
+				margin-bottom:30px;
+				font:normal 30px Cassanet, Helvetica, sans-serif;
+				text-transform:uppercase;
+			}
+
+			h2,p,small,em{
+				display:block;
+				width:300px;
+			}
+
+		}
+	}
+
+	#upload{
+		padding-top:30px;
+		height:320px;
+		width:900px;
+		margin:0 auto;
+
+		img{
+			float:left;
+			margin-right:60px;
+		}
+
+		.text{
+			float:left;
+			padding:50px 0 0 400px;
+			margin-bottom:40px;
+			width:740px;
+			height:230px;
+			background:url(i/intro.png) no-repeat 0 0;
+			h2{
+				margin-bottom:30px;
+				font:normal 30px Cassanet, Helvetica, sans-serif;
+				text-transform:uppercase;
+			}
+
+			h2,p,small,em{
+				display:block;
+				width:400px;
+			}
+
+		}
+
+
+	}
+}
+.brick-helper{
+	display:none;
+	position:absolute;
+	padding:10px;
+	border:1px solid #000;
+	background:rgba(70,70,70,0.8);
+	color:#fff;
+	text-shadow:0 1px #000;
+	z-index:200;
+	@include border-radius(10px);
+}
+.form-bg{
+	position:fixed;
+	bottom:170px;
+	left:0;
+	@include opacity(1);
+	@include transition(opacity 0.2s);
+	@include transition(height 0.2s);
+	width:100%;
+	height:70px;
+	background:url(i/line-shadow.png) repeat-x 0 0;
+
+	&.fixed{
+		@include opacity(0);
+		height:0;
+	}
+}
+
+form#upload-image{
+		overflow:hidden;
+		width:100%;
+		
+		position:fixed;
+		bottom:0;
+		left:0;
+		height:240px;
+		z-index:100;
+		// position:relative;
+
+		&.fixed{
+			position: static;
+			height:auto;
+			width:auto;
+
+			fieldset{
+				height:auto;
+				padding:0;
+				margin:0;
+				background:transparent;
+			}
+
+			
+		}
+		
+
+		fieldset{
+			height:130px;
+			padding-top:40px;
+			margin-top:70px;
+			background:#333;
+		}
+
+		.upload{
+			position:relative;
+			width:302px;
+			height:90px;
+			background:url(i/button.png) no-repeat 0 0;
+			text-align:center;
+			padding-top:10px;
+			margin:0 auto;
+
+			font:normal 16px Cassanet, Helvetica, Arial, sans-serif;
+			text-transform:uppercase;
+			text-shadow:0 1px rgba(0,0,0,0.7);
+
+			em{
+				font-family:Helvetica, arial, sans-serif;
+				font-size:12px;
+			}
+
+			&.hover{
+				@include opacity(0.8);
+			}
+		}
+
+		.file{
+			cursor:pointer;
+			position:absolute;
+			top:0;
+			left:0;
+			width:302px;
+			height:90px;
+			@include opacity(0);
+		}
+
+		button{
+			display:none;
+		}
+	}
+
+.lego-image{
+	
+	margin:70px auto 50px;
+	overflow: hidden;
+	position:relative;
+
+	.brick{
+		position:absolute;
+		background-image:url(i/lego-stud.png);
+		background-repeat:repeat-x;
+		background-position:0 50%;
+
+		&.hover, &.selected{
+			cursor:pointer;
+			// border:1px solid red;
+			z-index:15;
+			@include box-shadow(0px 3px 10px rgba(0, 0, 0, 0.6));
+		}
+
+		&.hover.disabled{
+			opacity:0.5;
+		}
+
+		&.disabled{
+			opacity:0;
+
+			&.selected{
+				opacity:0.5;
+				border:1px solid red;
+			}
+		}
+	}
+
+	&.lego-pixel-15 .brick{
+		background-image:url(i/lego-stud-15.png);
+	}
+
+	&.lego-pixel-10 .brick{
+		background-image:url(i/lego-stud-10.png);
+	}
+
+	&.lego-pixel-35 .brick{
+		background-image:url(i/lego-stud-35.png);
+	}
+
+}
+
+.size{
+	margin-bottom:30px;
+	text-align:center;
+	p{
+		margin-bottom:10px;
+	}
+	strong{
+		@include inline-block;
+		padding:5px 10px;
+		border:1px solid #888;
+		background:#555;
+		font-size:14px;
+	}
+}
+
+.control{
+	width:420px;
+	padding:40px 0 40px 40px;
+	margin:0 auto;
+	border:10px solid rgba(0,0,0,0.4);
+	background:rgba(255,255,255,0.1);
+
+	.save-reset{
+		position:relative;
+		left:-20px;
+		margin-bottom:20px;
+		button{
+			cursor:pointer;
+			width:130px;
+			height:53px;
+			vertical-align:top;
+			background:url(i/minibutton.png) no-repeat 15px 6px;
+			text-align:center;
+			font:normal 16px Cassanet, Helvetica, Arial, sans-serif;
+			text-transform:uppercase;
+			text-shadow:0 1px rgba(0,0,0,0.7);
+			color:#fff;
+			border:none;
+			padding:0;
+			margin:0;
+
+
+		}
+	}	
+}
+
+.helper{
+	position:fixed;
+	top:40px;
+	right:40px;
+	background:rgba(30,30,30,0.7);
+	@include border-radius(10px);
+	border:1px solid #000;
+	width:300px;
+	padding:20px;
+	@include box-shadow(0 0 10px rgba(0,0,0,0.7));
+}
+
+.tm{
+	margin-top:100px;
+	padding:20px 0;
+	width:100%;
+	@include opacity(0.5);
+	text-align:center;
+	
+	p{
+		font-size:11px;
+	}
+	strong{
+		font-size:12px;
+	}
+
+	a{
+		color:#fff;
+	}
+}
+
+.control-panel{
+	display:none;
+	position:absolute;
+	left:300px;
+	z-index:500;
+	
+
+	.actions{
+		position:absolute;
+		top:0;
+		left:0;
+		background:url(i/wheelsprite.png) no-repeat 0 0;
+		width:320px;
+		height:320px;
+		overflow: hidden;
+
+		&.step-close{
+			background-position:0 -320px;
+		}
+		&.step-1{
+			background-position:0 -640px;
+		}
+		&.step-2{
+			background-position:0 -960px;
+		}
+		&.step-3{
+			background-position:0 -1280px;
+		}
+		&.step-4{
+			background-position:0 -1600px;
+		}
+		&.step-5{
+			background-position:0 -1920px;
+		}
+	}
+
+	span{
+			cursor:pointer;
+			position:absolute;
+			display:block;
+			width:85px;
+			height:85px;
+			text-indent:-9999em;
+			
+			
+			&.close{
+				width:50px;
+				height:50px;
+				top:135px;
+				left:135px;
+			}
+
+			&.add{
+				top:40px;
+				left:170px;
+			}
+			&.remove-color{
+				top:143px;
+				left:30px;
+			}
+			&.putback-color{
+				top:143px;
+				left:210px;
+			}
+			&.change-color{
+				top:210px;
+				left:120px;
+			}
+			&.remove{
+				top:40px;
+				left:60px;
+			}
+		}
+}
+
+.colorpicker{
+	display:none;
+	position:absolute;
+	top:20px;
+	left:20px;
+	z-index:200;
+	
+	.cancel{
+		position:absolute;
+		top:95px;
+		left:95px;
+		width:89px;
+		height:89px;
+		@include border-radius(100% 100%);
+		border:1px solid rgba(0,0,0,0.3);
+		background:#383838 url(i/cancel.png?a) no-repeat 0 0;
+		z-index:400;
+		@include box-shadow(0 0 10px #333);
+
+		&.nobg{
+			background-image:url(i/cancel-color.png);
+		}
+	}
+}
+
+//Canvas color wheel
+#svg{
+	path{
+		cursor:pointer;
+	}
+}
+
+.pieces{
+	background:#fff;
+	overflow:hidden;
+	width:100%;
+	margin:40px auto 0;
+	color:#333;
+	text-shadow:none;
+	text-align:center;
+	
+	h2{
+		@include inline-block;
+		text-transform:uppercase;
+		margin:30px auto;
+		font:normal 30px Cassanet, Helvetica, Arial, sans-serif;
+	}
+
+	.list{
+		overflow: hidden;
+		width:1002px;
+		margin:30px auto;
+		text-align:left;
+		border:10px solid #ddd;
+	}
+	dl{
+		float:left;
+		width:142px;
+		padding:0 12px 20px;
+		text-align:center;
+		border-right:1px solid #ddd;
+		border-bottom:1px solid #ddd;
+		
+		&:nth-child(6n){
+			border-right:none;
+		}
+
+		dt{
+			text-align:center;
+			position:relative;
+			display:block;
+			margin:30px 0 15px;
+			text-decoration:underline;
+			
+
+			span{
+				@include inline-block;
+				margin:0 auto 10px;
+				margin-right:20px;
+				width:40px;
+				height:24px;
+				background:url(i/transparent-brick.png) no-repeat 0 0;
+			}
+
+			em{
+				@include inline-block;
+				margin-bottom:30px;
+				padding:5px 10px;
+				color:#fff;
+				border:1px solid #333;
+				text-shadow:0 1px #000;
+				background:#666;
+			}
+
+			&.black span{
+				background-color:#000;
+			}
+			&.dark-grey span{
+				background-color:rgba(76, 81, 86,1);
+			}
+			&.dark-flesh span{
+				background-color:rgba(233, 140, 53,1);
+			}
+			&.pink span{
+				background-color:rgba(238, 157, 195,1);
+			}
+			&.purple span{
+				background-color:rgba(156, 0, 107,1);
+			}
+			&.dark-pink span{
+				background-color:rgba(222, 55, 139,1);
+			}
+			&.sand-green span{
+				background-color:rgba(95, 130, 101,1);
+			}
+			&.sand-blue span{
+				background-color:rgba(94, 116, 140,1);
+			}
+			&.reddish-brown span{
+				background-color:rgba(168, 61, 21,1);
+			}
+			&.dark-tan span{
+				background-color:rgba(141, 116, 82,1);
+			}
+			&.brown span{
+				background-color:rgba(91, 28, 12,1);
+			}
+			&.dark-brown span{
+				background-color:rgba(48, 15, 16,1);
+			}
+			&.dark-red span{
+				background-color:rgba(128, 8, 27 ,1);
+			}
+			&.light-grey span{
+				background-color:rgba(228, 228, 218 ,1);
+			}
+			&.lime span{
+				background-color:rgba(149, 185, 11 ,1);
+			}
+			&.green span{
+				background-color:rgba(0, 150, 36,1);
+			}
+			&.dark-green span{
+				background-color:rgba(0, 123, 40,1);
+			}
+			&.dark-blue span{
+				background-color:rgba(44, 21, 119,1);
+			}
+			&.medium-blue span{
+				background-color:rgba(135, 192, 234,1);
+			}
+			&.blue span{
+				background-color:rgba(0 , 87 , 168,1);
+			}
+			&.tan span{
+				background-color:rgba(245 , 193 , 137,1);
+			}
+			&.red span{
+				background-color:rgba(222 , 0 , 13,1);
+			}
+			&.dark-orange span{
+				background-color:rgba(231 , 99 , 2,1);
+			}
+			&.orange span{
+				background-color:rgba(244 , 155 , 0,1);
+			}
+			&.yellow span{
+				background-color:rgba(254 , 196 , 0,1);
+			}
+
+			
+		}
+
+		dd{
+			margin-bottom:10px;
+
+			strong{
+				font-weight:bold;
+			}
+		}
+	}
+}

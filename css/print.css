@@ -1,0 +1,47 @@
+/* line 1, ../sass/print.scss */
+#upload, .save-reset, #intro, #upload-image {
+  display: none !important;
+}
+
+/* line 5, ../sass/print.scss */
+body, header {
+  background: #fff;
+}
+
+/* line 7, ../sass/print.scss */
+.size {
+  color: #000;
+  text-shadow: none;
+}
+/* line 11, ../sass/print.scss */
+.size strong {
+  color: #fff;
+}
+
+/* line 13, ../sass/print.scss */
+.tm {
+  color: #000;
+  text-shadow: none;
+}
+
+/* line 18, ../sass/print.scss */
+.helper.bricks {
+  display: none !important;
+}
+
+/* line 22, ../sass/print.scss */
+.lego-image {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+/* line 26, ../sass/print.scss */
+.lego-image .brick {
+  border: 1px solid black;
+}
+
+/* line 30, ../sass/print.scss */
+.change-size {
+  color: #000;
+  text-shadow: none;
+}
