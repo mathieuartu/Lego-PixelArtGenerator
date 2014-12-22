@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/global.css" type="text/css">
-		<?php 
+		<?php
 			if(isset($_GET['print'])){
 				echo '<link rel="stylesheet" href="css/print.css" type="text/css">'."\n";
 			}
@@ -21,9 +21,9 @@
 				</a>
 			</h1>
 		</header>
-		
+
 		<div id="global">
-			<?php 
+			<?php
 				if(isset($_GET['print'])){
 					echo '<div class="print-enabled"></div>'."\n";
 				}
@@ -38,14 +38,14 @@
 				</div>
 			</section>
 			<section id="upload">
-				
+
 				<div class="text">
 					<h2>Let's get started!</h2>
 					<p>Start by uploading your image to our servers.</p>
 					<small>Note that the image should be big enough to show best results.</small>
 					<em>Jpegs, Pngs and Gifs only are accepted, 10mo maximum.</em>
 				</div>
-				
+
 			</section>
 
 			<form id="upload-image" method="post" action="" enctype="multipart/form-data">
@@ -59,7 +59,7 @@
 							<input class="file" type="file" name="uploaded-image" id="uploaded-image">
 							<button>OK !</button>
 						</div>
-						
+
 					</p>
 				</fieldset>
 			</form>
@@ -68,16 +68,11 @@
 			<?php
 
 				//Connect to mysql
-				$login = "dbo516943819";
-				$pass = "xngcsek";
-				$dbName = "db516943819";
-				$svName = "db516943819.db.1and1.com";
+				$login = "root";
+				$pass = "root";
+				$dbName = "legopixel";
+				$svName = "localhost";
 
-				$login2 = "root";
-				$pass2 = "root";
-				$dbName2 = "legopixel";
-				$svName2 = "localhost";
-				
 				$db = mysql_connect($svName, $login, $pass);
 				mysql_select_db($dbName,$db);
 
@@ -88,7 +83,7 @@
 				if(isset($_GET['art'])){
 
 					echo "<div class='saved'></div> \n";
-					
+
 
 					$urlSeed = $_GET['art'];
 
@@ -104,9 +99,9 @@
 						} else {
 							getLego($imageFile, 25);
 						}
-						
+
 					}
-					
+
 
 				} else {
 					//-----------------------
@@ -115,9 +110,9 @@
 					//---IMAGES
 
 					//Security !!!
-					$extension_upload = strtolower(  substr(  strrchr($_FILES['uploaded-image']['name'], '.')  ,1)  );                           
+					$extension_upload = strtolower(  substr(  strrchr($_FILES['uploaded-image']['name'], '.')  ,1)  );
 
-					
+
 					$imgDirName = "imgtoprocess/";
 
 					if($_FILES['uploaded-image']['name'] != ""){
@@ -135,19 +130,19 @@
 
 						$result = move_uploaded_file($_FILES['uploaded-image']['tmp_name'],$imgNewPath);
 
-					}			
+					}
 
 					//-----------------------
 					//-----------------------
 					//-----------------------
 					//Generate the lego pixel art
-					
+
 					if(isset($imageFile)){
 						echo "<div class='generated'></div> \n";
 						getLego($imageFile, 25);
 
 
-						$sql = "INSERT INTO legopixel(path, type, seed) VALUES('$imageFile->path','$imageFile->type','$imageFile->name')"; 
+						$sql = "INSERT INTO legopixel(path, type, seed) VALUES('$imageFile->path','$imageFile->type','$imageFile->name')";
 
 						$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
 
@@ -160,12 +155,12 @@
 
 				mysql_close();
 
-				
-				
+
+
 
 			?>
-			
-			
+
+
 			<div class="size hidden">
 				<p>
 					Estimated size : <strong><?php echo ($legoSize->width /10); ?>cm x <?php echo ($legoSize->height /10); ?>cm (W x H) </strong>
@@ -174,10 +169,10 @@
 					You will need a  <strong><?php echo ($legoSize->brickWidth); ?> x <?php echo ($legoSize->brickHeight); ?> (W x H) LEGO® Baseplate </strong>
 				</p>
 			</div>
-			
+
 			<div class="control hidden">
 
-				
+
 
 				<div class="save-reset">
 					<button class="save">Save</button>
@@ -201,11 +196,11 @@
 						<input type="hidden" name="previous-type" value="<?php echo $imageFile->type; ?>">
 				</div>
 			</div>
-			
+
 			<div class="brick-helper">
 				<p></p>
 			</div>
-			
+
 
 			<div class="control-panel">
 				<div class="actions">
@@ -221,10 +216,10 @@
 					<span class="cancel"></span>
 				</div>
 			</div>
-			
+
 			<br><br>
 		</div>
-		
+
 		<div class="helper bricks hidden">
 			<p>Scroll down to see the bricks you need for your LEGO® Pixel Art!</p>
 		</div>
@@ -236,10 +231,10 @@
 		<div class="pieces hidden">
 			<h2>List of all the pieces you'll need : </h2>
 			<div class="list">
-				
+
 			</div>
 		</div>
-		
+
 		<div class="tm">
 			<strong>LEGO® Pixel Art Generator was assembled brick by brick by <a href="http://www.mathieuartu.net/dev">Mathieu Artu</a></strong>
 			<br><strong>If you like LEGO® Pixel Art Generator and want to retribute my work, feel free to make a donation :)</strong>
@@ -251,7 +246,7 @@
 </form>
 
 			<p>LEGO® is a trademark owned by LEGO® company</p>
-			<p>This website is not connected in any way to the LEGO® company</p> 
+			<p>This website is not connected in any way to the LEGO® company</p>
 		</div>
 
 		<script src="js/jquery.js"></script>
